@@ -1,0 +1,14 @@
+PODS:
+  - libidn (0.1.0)
+
+DEPENDENCIES:
+  - libidn (from `../`)
+
+EXTERNAL SOURCES:
+  libidn:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  libidn: f3d87667d784e4591c83183845864cf88ca12686
+
+COCOAPODS: 0.38.2
