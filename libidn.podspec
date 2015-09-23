@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "libidn"
-  s.version          = "1.32"
+  s.version          = "1.32.1"
   s.summary          = "Encode/decode i18n domains using Stringprep, Punycode and IDNA."
   s.description      = <<-DESC
   GNU Libidn is a fully documented implementation of the Stringprep, Punycode and IDNA specifications. Libidn's purpose is to encode and decode internationalized domain names. The native C, C# and Java libraries are available under the GNU Lesser General Public License version 2.1 or later.
@@ -16,14 +16,16 @@ Libidn is developed for the GNU/Linux system, but runs on over 20 Unix platforms
 Also included is a command line tool, several self tests, code examples, and more, all licensed under the GNU General Public License version 3.0 or later.
                        DESC
 
-  s.homepage         = "https://www.gnu.org/software/libidn/"
+  s.homepage         = "https://github.com/chrisballinger/libidn-podspec"
   s.license          = { :type => 'LGPL', :file => 'COPYING' }
-  s.author           = { "Simon Josefsson" => "simon@josefsson.org" }
-  s.social_media_url = 'https://twitter.com/fsf'
+  s.authors           = { "Simon Josefsson" => "simon@josefsson.org",
+  						  "Chris Ballinger (podspec maintainer)" => "chrisballinger@gmail.com" }
+  s.social_media_url = 'https://twitter.com/jas4711'
   s.source = { :http => 'https://ftp.gnu.org/gnu/libidn/libidn-1.32.tar.gz',
                :sha256 => 'ba5d5afee2beff703a34ee094668da5c6ea5afa38784cebba8924105e185c4f5' }
   # We need to generate 'config.h', 'idn-int.h', 'unistr.h', 'unitypes.h', 'string.h'
   s.prepare_command = <<-CMD
+  		  echo $PWD
           sh ./configure --disable-dependency-tracking
           echo '#include <stdint.h>' > lib/idn-int.h
           mv lib/gl/unistr.in.h lib/gl/unistr.h
@@ -31,8 +33,8 @@ Also included is a command line tool, several self tests, code examples, and mor
           echo 'int strverscmp (const char *s1, const char *s2);\n#include_next <string.h>' > lib/gl/string.h
      CMD
 
-  s.platform     = :ios, '7.0', :osx, '10.8'
-  s.ios.deployment_target = "7.0"
+  s.platform     = :ios, '6.0', :osx, '10.8'
+  s.ios.deployment_target = "6.0"
   s.osx.deployment_target = "10.8"
   s.requires_arc = true
 
