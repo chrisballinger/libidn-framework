@@ -2,8 +2,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 
-target 'libidn_Tests', :exclusive => true do
-  pod "libidn", :path => "../libidn"
-
-  
+target 'libidnTests', :exclusive => true do
+  pod "libidn", :path => "../libidn"  
 end

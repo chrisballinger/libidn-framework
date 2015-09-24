@@ -7,41 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
-		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
-		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		8243308A703A90CC22972360 /* Pods_libidn_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E047BC70B4537E6F040D97B2 /* Pods_libidn_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		22B66FD56465C091B5EBD002 /* Pods_libidnTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44759D5AC74288BCC8AC3F3D /* Pods_libidnTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D9315C8F1BB37C840077D2EE /* libidnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9315C8E1BB37C840077D2EE /* libidnTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		28DAF212791064BEA9334C48 /* Pods-libidn_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libidn_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-libidn_Tests/Pods-libidn_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		44759D5AC74288BCC8AC3F3D /* Pods_libidnTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libidnTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D86DC975569725AEAE56CBD /* libidn.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = libidn.podspec; path = ../libidn.podspec; sourceTree = "<group>"; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6003F5AE195388D20070C39A /* libidn_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libidn_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
-		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		64BAE5BFF0CD25EB37AFC3A2 /* Pods-libidnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libidnTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-libidnTests/Pods-libidnTests.release.xcconfig"; sourceTree = "<group>"; };
 		7737018830FF69D1B9B8A39C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A83D50B9613DB17D7CD3A3C3 /* Pods-libidnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libidnTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-libidnTests/Pods-libidnTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4F60CD906AB49C0EBA8128E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C0AF3C3F8A9E0EF425F47602 /* Pods-libidn_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libidn_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-libidn_Tests/Pods-libidn_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9315C8C1BB37C840077D2EE /* libidnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libidnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9315C8E1BB37C840077D2EE /* libidnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libidnTests.m; sourceTree = "<group>"; };
+		D9315C901BB37C840077D2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E047BC70B4537E6F040D97B2 /* Pods_libidn_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libidn_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6003F5AB195388D20070C39A /* Frameworks */ = {
+		D9315C891BB37C840077D2EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
-				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
-				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				8243308A703A90CC22972360 /* Pods_libidn_Tests.framework in Frameworks */,
+				22B66FD56465C091B5EBD002 /* Pods_libidnTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +47,8 @@
 			children = (
 				C0AF3C3F8A9E0EF425F47602 /* Pods-libidn_Tests.debug.xcconfig */,
 				28DAF212791064BEA9334C48 /* Pods-libidn_Tests.release.xcconfig */,
+				A83D50B9613DB17D7CD3A3C3 /* Pods-libidnTests.debug.xcconfig */,
+				64BAE5BFF0CD25EB37AFC3A2 /* Pods-libidnTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -61,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				6003F5B5195388D20070C39A /* Tests */,
+				D9315C8D1BB37C840077D2EE /* libidnTests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				5F8CE36B61C96722A44422F7 /* Pods */,
@@ -71,7 +67,7 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5AE195388D20070C39A /* libidn_Tests.xctest */,
+				D9315C8C1BB37C840077D2EE /* libidnTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,27 +80,9 @@
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				E047BC70B4537E6F040D97B2 /* Pods_libidn_Tests.framework */,
+				44759D5AC74288BCC8AC3F3D /* Pods_libidnTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6003F5B5195388D20070C39A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
-				6003F5B6195388D20070C39A /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		6003F5B6195388D20070C39A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5B7195388D20070C39A /* Tests-Info.plist */,
-				6003F5B8195388D20070C39A /* InfoPlist.strings */,
-				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
@@ -117,27 +95,36 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		D9315C8D1BB37C840077D2EE /* libidnTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9315C8E1BB37C840077D2EE /* libidnTests.m */,
+				D9315C901BB37C840077D2EE /* Info.plist */,
+			);
+			path = libidnTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6003F5AD195388D20070C39A /* libidn_Tests */ = {
+		D9315C8B1BB37C840077D2EE /* libidnTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "libidn_Tests" */;
+			buildConfigurationList = D9315C911BB37C840077D2EE /* Build configuration list for PBXNativeTarget "libidnTests" */;
 			buildPhases = (
-				C4358F0D49424BA3D1ADB7E5 /* Check Pods Manifest.lock */,
-				6003F5AA195388D20070C39A /* Sources */,
-				6003F5AB195388D20070C39A /* Frameworks */,
-				6003F5AC195388D20070C39A /* Resources */,
-				E8C3AC37B288113E966FFD49 /* Embed Pods Frameworks */,
-				47B971F62091A1825860FCA3 /* Copy Pods Resources */,
+				22B61179BA2700DDCAA31FE6 /* Check Pods Manifest.lock */,
+				D9315C881BB37C840077D2EE /* Sources */,
+				D9315C891BB37C840077D2EE /* Frameworks */,
+				D9315C8A1BB37C840077D2EE /* Resources */,
+				DA0FAECAF6E8ED160F58FBD0 /* Embed Pods Frameworks */,
+				2B0D3921A24304E82FB343CE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = libidn_Tests;
+			name = libidnTests;
 			productName = libidnTests;
-			productReference = 6003F5AE195388D20070C39A /* libidn_Tests.xctest */;
+			productReference = D9315C8C1BB37C840077D2EE /* libidnTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -150,8 +137,8 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Chris Ballinger";
 				TargetAttributes = {
-					6003F5AD195388D20070C39A = {
-						TestTargetID = 6003F589195388D20070C39A;
+					D9315C8B1BB37C840077D2EE = {
+						CreatedOnToolsVersion = 7.0;
 					};
 				};
 			};
@@ -168,39 +155,23 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6003F5AD195388D20070C39A /* libidn_Tests */,
+				D9315C8B1BB37C840077D2EE /* libidnTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6003F5AC195388D20070C39A /* Resources */ = {
+		D9315C8A1BB37C840077D2EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		47B971F62091A1825860FCA3 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libidn_Tests/Pods-libidn_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4358F0D49424BA3D1ADB7E5 /* Check Pods Manifest.lock */ = {
+		22B61179BA2700DDCAA31FE6 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -215,7 +186,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E8C3AC37B288113E966FFD49 /* Embed Pods Frameworks */ = {
+		2B0D3921A24304E82FB343CE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libidnTests/Pods-libidnTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA0FAECAF6E8ED160F58FBD0 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -227,32 +213,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libidn_Tests/Pods-libidn_Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libidnTests/Pods-libidnTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6003F5AA195388D20070C39A /* Sources */ = {
+		D9315C881BB37C840077D2EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				D9315C8F1BB37C840077D2EE /* libidnTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5B9195388D20070C39A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6003F5BD195388D20070C39A /* Debug */ = {
@@ -328,45 +303,42 @@
 			};
 			name = Release;
 		};
-		6003F5C3195388D20070C39A /* Debug */ = {
+		D9315C921BB37C840077D2EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0AF3C3F8A9E0EF425F47602 /* Pods-libidn_Tests.debug.xcconfig */;
+			baseConfigurationReference = A83D50B9613DB17D7CD3A3C3 /* Pods-libidnTests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = libidnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.chatsecure.libidnTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libidn_Example.app/libidn_Example";
-				WRAPPER_EXTENSION = xctest;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		6003F5C4195388D20070C39A /* Release */ = {
+		D9315C931BB37C840077D2EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28DAF212791064BEA9334C48 /* Pods-libidn_Tests.release.xcconfig */;
+			baseConfigurationReference = 64BAE5BFF0CD25EB37AFC3A2 /* Pods-libidnTests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = libidnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = org.chatsecure.libidnTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libidn_Example.app/libidn_Example";
-				WRAPPER_EXTENSION = xctest;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -382,11 +354,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "libidn_Tests" */ = {
+		D9315C911BB37C840077D2EE /* Build configuration list for PBXNativeTarget "libidnTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6003F5C3195388D20070C39A /* Debug */,
-				6003F5C4195388D20070C39A /* Release */,
+				D9315C921BB37C840077D2EE /* Debug */,
+				D9315C931BB37C840077D2EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

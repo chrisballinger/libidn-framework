@@ -2,5 +2,6 @@ language: objective-c
 osx_image: xcode7
 
 script:
-  - cd Tests
+  - cd Example
   - pod install
+  - xctool -workspace libidn.xcworkspace -scheme libidnTests -sdk macosx -arch x86_64 test
