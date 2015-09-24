@@ -21,19 +21,9 @@ Also included is a command line tool, several self tests, code examples, and mor
   s.authors           = { "Simon Josefsson" => "simon@josefsson.org",
   						  "Chris Ballinger (podspec maintainer)" => "chrisballinger@gmail.com" }
   s.social_media_url = 'https://twitter.com/jas4711'
-  s.source = { :http => 'https://ftp.gnu.org/gnu/libidn/libidn-1.32.tar.gz',
-               :sha256 => 'ba5d5afee2beff703a34ee094668da5c6ea5afa38784cebba8924105e185c4f5' }
-  # We need to generate 'config.h', 'idn-int.h', 'unistr.h', 'unitypes.h', 'string.h'
-  s.prepare_command = <<-CMD
-  		  echo $PWD
-          sh ./configure --disable-dependency-tracking
-          echo '#include <stdint.h>' > lib/idn-int.h
-          mv lib/gl/unistr.in.h lib/gl/unistr.h
-          mv lib/gl/unitypes.in.h lib/gl/unitypes.h
-          echo 'int strverscmp (const char *s1, const char *s2);\n#include_next <string.h>' > lib/gl/string.h
-     CMD
+  s.source = { :git => 'https://github.com/chrisballinger/libidn.git',
+               :tag => s.version }
 
-  s.platform     = :ios, '6.0', :osx, '10.8'
   s.ios.deployment_target = "6.0"
   s.osx.deployment_target = "10.8"
   s.requires_arc = true

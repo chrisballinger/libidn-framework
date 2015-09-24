@@ -3,7 +3,7 @@ use_frameworks!
 
 
 target 'libidn_Tests', :exclusive => true do
-  pod "libidn", :path => "../"
+  pod "libidn", :path => "../libidn"
 
   
 end

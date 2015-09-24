@@ -11,6 +11,8 @@ From [GNU IDN Library - Libidn](http://www.gnu.org/software/libidn/)
 
 > The library contains a generic Stringprep implementation. Profiles for Nameprep, iSCSI, SASL, XMPP and Kerberos V5 are included. Punycode and ASCII Compatible Encoding (ACE) via IDNA are supported. A mechanism to define Top-Level Domain (TLD) specific validation tables, and to compare strings against those tables, is included. Default tables for some TLDs are also included.
 
+This podspec uses a [fork of libidn](https://github.com/chrisballinger/libidn/compare/1.32-podspec) to fix a few minor issues related to CocoaPods integration.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
