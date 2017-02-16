@@ -17,3 +17,9 @@ FOUNDATION_EXPORT const unsigned char libidnVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <libidn/PublicHeader.h>
 
 
+#import "libidn/idn-int.h"
+#import "libidn/idna.h"
+#import "libidn/pr29.h"
+#import "libidn/punycode.h"
+#import "libidn/stringprep.h"
+#import "libidn/tld.h"
