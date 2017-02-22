@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "90245095246C89EBD5ABCE375FC975C884DF243F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "90245095246C89EBD5ABCE375FC975C884DF243F" : 9223372036854775807,
+    "BD7F595594A217371149D4C75B9AB60E80BE2D2E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "47AEBB1C-FB50-42A1-9FA6-1D5C03B3D059",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "90245095246C89EBD5ABCE375FC975C884DF243F" : "libidn-framework\/",
+    "BD7F595594A217371149D4C75B9AB60E80BE2D2E" : "libidn-framework\/libidn\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "libidn",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Tests\/libidn.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:chrisballinger\/libidn-podspec.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "90245095246C89EBD5ABCE375FC975C884DF243F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:chrisballinger\/libidn.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BD7F595594A217371149D4C75B9AB60E80BE2D2E"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "libidn"
-  s.version          = "1.32.1"
+  s.version          = "1.33"
   s.summary          = "Encode/decode i18n domains using Stringprep, Punycode and IDNA."
   s.description      = <<-DESC
   GNU Libidn is a fully documented implementation of the Stringprep, Punycode and IDNA specifications. Libidn's purpose is to encode and decode internationalized domain names. The native C, C# and Java libraries are available under the GNU Lesser General Public License version 2.1 or later.
@@ -17,21 +17,20 @@ Also included is a command line tool, several self tests, code examples, and mor
                        DESC
 
   s.homepage         = "https://github.com/chrisballinger/libidn-podspec"
-  s.license          = { :type => 'LGPL', :file => 'COPYING' }
+  s.license          = { :type => 'LGPL', :file => 'LICENSE' }
   s.authors           = { "Simon Josefsson" => "simon@josefsson.org",
   						  "Chris Ballinger (podspec maintainer)" => "chrisballinger@gmail.com" }
   s.social_media_url = 'https://twitter.com/jas4711'
-  s.source = { :git => 'https://github.com/chrisballinger/libidn.git',
+  s.source = { :git => 'https://github.com/chrisballinger/libidn-podspec.git',
                :tag => s.version }
 
-  s.ios.deployment_target = "6.0"
-  s.osx.deployment_target = "10.8"
+  s.ios.deployment_target = "8.0"
+  s.osx.deployment_target = "10.9"
+  s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
   s.requires_arc = true
 
-  s.source_files = 'lib/**/*.{c,h}', 'config.h', 'build-aux/snippet/unused-parameter.h'
-  s.public_header_files = 'lib/idn-int.h', 'lib/idna.h', 'lib/pr29.h', 'lib/punycode.h', 'lib/stringprep.h', 'lib/tld.h'
-  s.exclude_files = 'lib/idn-free.{c,h}', 'lib/gltests'
-  s.compiler_flags = '-DHAVE_CONFIG_H', '-DLIBIDN_BUILDING', '-DLOCALEDIR=\"/usr/share/locale\"'
+  s.source_files = 'Framework/*.{m,h}', 'libidn/lib/stringprep.h', 'libidn/lib/{profiles,stringprep,rfc3454,nfkc}.c', 'libidn/lib/gl/unistr/u8-check.c'
+  s.public_header_files = 'Framework/*.h'
   s.library = 'iconv'
-  s.xcconfig = { :HEADER_SEARCH_PATHS => "$(inherited) ${SRCROOT} ${SRCROOT}/lib ${SRCROOT}/lib/gl"}
 end

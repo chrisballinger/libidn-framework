@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F374C369AC2634387D87011 /* Pods_libidnTestsPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FEFFF66BBBBCE75938432D /* Pods_libidnTestsPods.framework */; };
+		D9315C8F1BB37C840077D2EE /* libidnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9315C8E1BB37C840077D2EE /* libidnTests.m */; };
+		D949C9721E5E112700DF5447 /* libidnSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949C9711E5E112700DF5447 /* libidnSwiftTests.swift */; };
+		D949C9731E5E112700DF5447 /* libidnSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949C9711E5E112700DF5447 /* libidnSwiftTests.swift */; };
+		D9A06D101E5D87F200FA59D3 /* libidnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9315C8E1BB37C840077D2EE /* libidnTests.m */; };
+		D9A06D6E1E5D897000FA59D3 /* libidn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A06D6B1E5D896400FA59D3 /* libidn.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D949C9771E5E112800DF5447 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9A06D1B1E5D888700FA59D3 /* libidn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D949C9281E5E097F00DF5447;
+			remoteInfo = "libidn (watchOS)";
+		};
+		D949C9791E5E112800DF5447 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9A06D1B1E5D888700FA59D3 /* libidn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D949C96C1E5E09E600DF5447;
+			remoteInfo = "libidn (tvOS)";
+		};
+		D9A06D1F1E5D888800FA59D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9A06D1B1E5D888700FA59D3 /* libidn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0D2812311E5597AF00DFC03B;
+			remoteInfo = libidn;
+		};
+		D9A06D6A1E5D896400FA59D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9A06D1B1E5D888700FA59D3 /* libidn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D9A06D661E5D88F100FA59D3;
+			remoteInfo = "libidn (macOS)";
+		};
+		D9A06D6C1E5D896A00FA59D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9A06D1B1E5D888700FA59D3 /* libidn.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D9A06D241E5D88F100FA59D3;
+			remoteInfo = "libidn (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		31FEFFF66BBBBCE75938432D /* Pods_libidnTestsPods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libidnTestsPods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BFE0CB7FB0EFB5D107E5839 /* Pods-libidnTestsPods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libidnTestsPods.release.xcconfig"; path = "Pods/Target Support Files/Pods-libidnTestsPods/Pods-libidnTestsPods.release.xcconfig"; sourceTree = "<group>"; };
+		5D86DC975569725AEAE56CBD /* libidn.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = libidn.podspec; path = ../libidn.podspec; sourceTree = "<group>"; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7737018830FF69D1B9B8A39C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9E15FC3EF871134EDEE1E5E1 /* Pods-libidnTestsPods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libidnTestsPods.debug.xcconfig"; path = "Pods/Target Support Files/Pods-libidnTestsPods/Pods-libidnTestsPods.debug.xcconfig"; sourceTree = "<group>"; };
+		B4F60CD906AB49C0EBA8128E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D9315C8C1BB37C840077D2EE /* libidnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libidnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9315C8E1BB37C840077D2EE /* libidnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libidnTests.m; sourceTree = "<group>"; };
+		D9315C901BB37C840077D2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D949C9711E5E112700DF5447 /* libidnSwiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libidnSwiftTests.swift; sourceTree = "<group>"; };
+		D949C9921E5E1BB400DF5447 /* IDN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IDN-Bridging-Header.h"; sourceTree = "<group>"; };
+		D9A06D191E5D87F200FA59D3 /* libidnTestsPods.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libidnTestsPods.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9A06D1B1E5D888700FA59D3 /* libidn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libidn.xcodeproj; path = ../libidn.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9315C891BB37C840077D2EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9A06D6E1E5D897000FA59D3 /* libidn.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9A06D111E5D87F200FA59D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F374C369AC2634387D87011 /* Pods_libidnTestsPods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39D74F44FC6BC1806AE76449 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E15FC3EF871134EDEE1E5E1 /* Pods-libidnTestsPods.debug.xcconfig */,
+				5BFE0CB7FB0EFB5D107E5839 /* Pods-libidnTestsPods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				D9A06D1B1E5D888700FA59D3 /* libidn.xcodeproj */,
+				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				D9315C8D1BB37C840077D2EE /* libidnTests */,
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F58B195388D20070C39A /* Products */,
+				39D74F44FC6BC1806AE76449 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9315C8C1BB37C840077D2EE /* libidnTests.xctest */,
+				D9A06D191E5D87F200FA59D3 /* libidnTestsPods.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				6003F5AF195388D20070C39A /* XCTest.framework */,
+				31FEFFF66BBBBCE75938432D /* Pods_libidnTestsPods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				5D86DC975569725AEAE56CBD /* libidn.podspec */,
+				B4F60CD906AB49C0EBA8128E /* README.md */,
+				7737018830FF69D1B9B8A39C /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		D9315C8D1BB37C840077D2EE /* libidnTests */ = {
+			isa = PBXGroup;
+			children = (
+				D949C9921E5E1BB400DF5447 /* IDN-Bridging-Header.h */,
+				D949C9711E5E112700DF5447 /* libidnSwiftTests.swift */,
+				D9315C8E1BB37C840077D2EE /* libidnTests.m */,
+				D9315C901BB37C840077D2EE /* Info.plist */,
+			);
+			path = libidnTests;
+			sourceTree = "<group>";
+		};
+		D9A06D1C1E5D888700FA59D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9A06D201E5D888800FA59D3 /* libidn.framework */,
+				D9A06D6B1E5D896400FA59D3 /* libidn.framework */,
+				D949C9781E5E112800DF5447 /* libidn.framework */,
+				D949C97A1E5E112800DF5447 /* libidn.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9315C8B1BB37C840077D2EE /* libidnTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9315C911BB37C840077D2EE /* Build configuration list for PBXNativeTarget "libidnTests" */;
+			buildPhases = (
+				D9315C881BB37C840077D2EE /* Sources */,
+				D9315C891BB37C840077D2EE /* Frameworks */,
+				D9315C8A1BB37C840077D2EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9A06D6D1E5D896A00FA59D3 /* PBXTargetDependency */,
+			);
+			name = libidnTests;
+			productName = libidnTests;
+			productReference = D9315C8C1BB37C840077D2EE /* libidnTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D9A06D0D1E5D87F200FA59D3 /* libidnTestsPods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9A06D161E5D87F200FA59D3 /* Build configuration list for PBXNativeTarget "libidnTestsPods" */;
+			buildPhases = (
+				D9A06D0E1E5D87F200FA59D3 /* [CP] Check Pods Manifest.lock */,
+				D9A06D0F1E5D87F200FA59D3 /* Sources */,
+				D9A06D111E5D87F200FA59D3 /* Frameworks */,
+				D9A06D131E5D87F200FA59D3 /* Resources */,
+				D9A06D141E5D87F200FA59D3 /* [CP] Embed Pods Frameworks */,
+				D9A06D151E5D87F200FA59D3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libidnTestsPods;
+			productName = libidnTests;
+			productReference = D9A06D191E5D87F200FA59D3 /* libidnTestsPods.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IDN;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Chris Ballinger";
+				TargetAttributes = {
+					D9315C8B1BB37C840077D2EE = {
+						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
+					};
+					D9A06D0D1E5D87F200FA59D3 = {
+						LastSwiftMigration = 0820;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "libidn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D9A06D1C1E5D888700FA59D3 /* Products */;
+					ProjectRef = D9A06D1B1E5D888700FA59D3 /* libidn.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				D9315C8B1BB37C840077D2EE /* libidnTests */,
+				D9A06D0D1E5D87F200FA59D3 /* libidnTestsPods */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D949C9781E5E112800DF5447 /* libidn.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = libidn.framework;
+			remoteRef = D949C9771E5E112800DF5447 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D949C97A1E5E112800DF5447 /* libidn.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = libidn.framework;
+			remoteRef = D949C9791E5E112800DF5447 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9A06D201E5D888800FA59D3 /* libidn.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = libidn.framework;
+			remoteRef = D9A06D1F1E5D888800FA59D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9A06D6B1E5D896400FA59D3 /* libidn.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = libidn.framework;
+			remoteRef = D9A06D6A1E5D896400FA59D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9315C8A1BB37C840077D2EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9A06D131E5D87F200FA59D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D9A06D0E1E5D87F200FA59D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D9A06D141E5D87F200FA59D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libidnTestsPods/Pods-libidnTestsPods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9A06D151E5D87F200FA59D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libidnTestsPods/Pods-libidnTestsPods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9315C881BB37C840077D2EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D949C9721E5E112700DF5447 /* libidnSwiftTests.swift in Sources */,
+				D9315C8F1BB37C840077D2EE /* libidnTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9A06D0F1E5D87F200FA59D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D949C9731E5E112700DF5447 /* libidnSwiftTests.swift in Sources */,
+				D9A06D101E5D87F200FA59D3 /* libidnTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9A06D6D1E5D896A00FA59D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libidn (macOS)";
+			targetProxy = D9A06D6C1E5D896A00FA59D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9315C921BB37C840077D2EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = libidnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.chatsecure.libidnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "libidnTests/IDN-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D9315C931BB37C840077D2EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = libidnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = org.chatsecure.libidnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "libidnTests/IDN-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D9A06D171E5D87F200FA59D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E15FC3EF871134EDEE1E5E1 /* Pods-libidnTestsPods.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = libidnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.chatsecure.libidnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "libidnTests/IDN-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D9A06D181E5D87F200FA59D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BFE0CB7FB0EFB5D107E5839 /* Pods-libidnTestsPods.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = libidnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = org.chatsecure.libidnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "libidnTests/IDN-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "libidn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9315C911BB37C840077D2EE /* Build configuration list for PBXNativeTarget "libidnTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9315C921BB37C840077D2EE /* Debug */,
+				D9315C931BB37C840077D2EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9A06D161E5D87F200FA59D3 /* Build configuration list for PBXNativeTarget "libidnTestsPods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9A06D171E5D87F200FA59D3 /* Debug */,
+				D9A06D181E5D87F200FA59D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}
