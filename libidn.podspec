@@ -31,7 +31,7 @@ Also included is a command line tool, several self tests, code examples, and mor
   s.watchos.deployment_target = '2.0'
   s.requires_arc = true
 
-  s.source_files = 'Framework/*.{m,h}', 'libidn/lib/stringprep.h', 'libidn/lib/{profiles,stringprep,rfc3454,nfkc}.c', 'libidn/lib/gl/unistr/u8-check.c'
+  s.source_files = 'Framework/*.{m,h}', 'libidn/lib/{stringprep, gunicomp, gunidecomp}.h', 'libidn/lib/{profiles,stringprep,rfc3454,nfkc}.c', 'libidn/lib/gl/unistr/u8-check.c'
   s.public_header_files = 'Framework/*.h'
   s.library = 'iconv'
 end

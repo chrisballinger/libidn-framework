@@ -4,4 +4,6 @@ use_frameworks!
 
 target 'libidnTestsPods' do
   pod "libidn", :path => "../"  
+  # pod 'libidn', :git => 'https://github.com/chrisballinger/libidn-framework.git', :branch => 'master', :submodules => true
 end
+
