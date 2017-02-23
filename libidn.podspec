@@ -22,7 +22,8 @@ Also included is a command line tool, several self tests, code examples, and mor
   						  "Chris Ballinger (podspec maintainer)" => "chrisballinger@gmail.com" }
   s.social_media_url = 'https://twitter.com/jas4711'
   s.source = { :git => 'https://github.com/chrisballinger/libidn-podspec.git',
-               :tag => s.version }
+               :tag => s.version,
+               :submodules => true }
 
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
