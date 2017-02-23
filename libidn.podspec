@@ -22,8 +22,7 @@ Also included is a command line tool, several self tests, code examples, and mor
   						  "Chris Ballinger (podspec maintainer)" => "chrisballinger@gmail.com" }
   s.social_media_url = 'https://twitter.com/jas4711'
   s.source = { :git => 'https://github.com/chrisballinger/libidn-podspec.git',
-               :tag => s.version,
-               :submodules => true }
+               :tag => s.version }
 
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
@@ -31,7 +30,7 @@ Also included is a command line tool, several self tests, code examples, and mor
   s.watchos.deployment_target = '2.0'
   s.requires_arc = true
 
-  s.source_files = 'Framework/*.{m,h}', 'libidn/lib/{stringprep, gunicomp, gunidecomp}.h', 'libidn/lib/{profiles,stringprep,rfc3454,nfkc}.c', 'libidn/lib/gl/unistr/u8-check.c'
+  s.source_files = 'Framework/*.{m,h}', 'lib/*.{h,c}'
   s.public_header_files = 'Framework/*.h'
   s.library = 'iconv'
 end
