@@ -30,25 +30,12 @@ pod "libidn"
 
 Upgrading libidn:
 
-```
-# Install build dependencies
-$ brew install automake autoconf libtool gettext gtk-doc gengetopt
-$ export PATH=${PATH}:/usr/local/opt/gettext/bin
+* Download latest release from [https://ftp.gnu.org/gnu/libidn](https://ftp.gnu.org/gnu/libidn/).
+* Copy over updated files that are in `/lib` folder
+* Comment out `#include <config.h>"`
+* Replace `# include <idn-int.h>` and `#include "unistr.h"` with `#include <stdint.h>`
 
-$ cd libidn # This is the submodule containing upstream source
-$ git remote add upstream git://git.savannah.gnu.org/libidn.git
-$ git fetch upstream
-$ git checkout <newest upstream tag>
-$ git checkout -b <newest upstream tag>-framework
-$ git stash && git clean -f -dx
-$ make bootstrap
-$ ./configure --disable-dependency-tracking
-$ make
-$ git cherry-pick f37ce6fd7c1cdc4376c3a618dc2c0674f73551f6 429663138867992f5c716fa8c3578912e24f4005 55b9b9533816f1e049d789fb2218de3e997d8a45 42f5ab2dc63c857d664d713d899961371ed58c12
-```
-
-For future reference, libidn includes duplicates of system headers that confuses the build system. We gotta remove them.
-
+ 
 ## Authors
 
 * [Chris Ballinger](https://github.com/chrisballinger) - Podspec maintainer
