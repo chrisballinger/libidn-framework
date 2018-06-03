@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "libidn"
-  s.version          = "1.33"
+  s.version          = "1.35"
   s.summary          = "Encode/decode i18n domains using Stringprep, Punycode and IDNA."
   s.description      = <<-DESC
   GNU Libidn is a fully documented implementation of the Stringprep, Punycode and IDNA specifications. Libidn's purpose is to encode and decode internationalized domain names. The native C, C# and Java libraries are available under the GNU Lesser General Public License version 2.1 or later.
