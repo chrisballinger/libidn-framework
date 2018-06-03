@@ -44,15 +44,15 @@
 
 # include <stddef.h>		/* size_t */
 # include <sys/types.h>		/* ssize_t */
-// # include "idn-int.h"		/* uint32_t */
-# include <stdint.h>
+//# include <idn-int.h>		/* uint32_t */
+#include <stdint.h>
 
 # ifdef __cplusplus
 extern "C"
 {
 # endif
 
-# define STRINGPREP_VERSION "1.33"
+# define STRINGPREP_VERSION "1.35"
 
 /* Error codes. */
   typedef enum
@@ -111,6 +111,7 @@ extern "C"
     Stringprep_profile_steps operation;
     Stringprep_profile_flags flags;
     const Stringprep_table_element *table;
+    size_t table_size;
   };
   typedef struct Stringprep_table Stringprep_profile;
 

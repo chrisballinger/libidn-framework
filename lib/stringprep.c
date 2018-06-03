@@ -36,39 +36,66 @@
 
 #include "stringprep.h"
 
+static int
+_compare_table_element (const uint32_t * c, const Stringprep_table_element * e)
+{
+  if (*c < e->start)
+    return -1;
+  if (*c > e->end)
+    return 1;
+  return 0;
+}
+
 static ssize_t
 stringprep_find_character_in_table (uint32_t ucs4,
-				    const Stringprep_table_element * table)
+				    const Stringprep_table_element * table,
+                                    size_t table_size)
 {
-  ssize_t i;
-
   /* This is where typical uses of Libidn spends very close to all CPU
      time and causes most cache misses.  One could easily do a binary
      search instead.  Before rewriting this, I want hard evidence this
      slowness is at all relevant in typical applications.  (I don't
      dispute optimization may improve matters significantly, I'm
      mostly interested in having someone give real-world benchmark on
-     the impact of libidn.) */
+     the impact of libidn.)
+   *
+   * Answer (Tim Rühsen rockdaboot@gmx.de):
+   * Testing the fuzz corpora just once via make check takes ~54 billion CPU cycles.
+   * That is almost 20s on my Intel i3 3.1GHz !!!
+   * That even makes fuzzing almost useless, eating up CPU cycles for nothing.
+   *
+   * The bsearch() approach takes ~3 billion CPU cycles.
+   * Almost a factor of 20 faster (but still pretty slow).
+   * There are still ~2 million calls to bsearch() which make ~30% of CPU time used.
+   * Most time is spent in _g_utf8_normalize_wc().
+
+  ssize_t i;
 
   for (i = 0; table[i].start || table[i].end; i++)
     if (ucs4 >= table[i].start &&
 	ucs4 <= (table[i].end ? table[i].end : table[i].start))
       return i;
+  */
 
-  return -1;
+  const Stringprep_table_element * p =
+    bsearch (&ucs4, table, table_size, sizeof(Stringprep_table_element),
+             (int (*)(const void *, const void *)) _compare_table_element);
+
+   return p ? (p - table) : -1;
 }
 
 static ssize_t
 stringprep_find_string_in_table (uint32_t * ucs4,
 				 size_t ucs4len,
 				 size_t * tablepos,
-				 const Stringprep_table_element * table)
+				 const Stringprep_table_element * table,
+                                 size_t table_size)
 {
   size_t j;
   ssize_t pos;
 
   for (j = 0; j < ucs4len; j++)
-    if ((pos = stringprep_find_character_in_table (ucs4[j], table)) != -1)
+    if ((pos = stringprep_find_character_in_table (ucs4[j], table, table_size)) != -1)
       {
 	if (tablepos)
 	  *tablepos = pos;
@@ -82,13 +109,16 @@ static int
 stringprep_apply_table_to_string (uint32_t * ucs4,
 				  size_t * ucs4len,
 				  size_t maxucs4len,
-				  const Stringprep_table_element * table)
+				  const Stringprep_table_element * table,
+                                  size_t table_size)
 {
   ssize_t pos;
   size_t i, maplen;
+  uint32_t *src = ucs4; /* points to unprocessed data */
+  size_t srclen = *ucs4len; /* length of unprocessed data */
 
-  while ((pos = stringprep_find_string_in_table (ucs4, *ucs4len,
-						 &i, table)) != -1)
+  while ((pos = stringprep_find_string_in_table (src, srclen,
+						 &i, table, table_size)) != -1)
     {
       for (maplen = STRINGPREP_MAX_MAP_CHARS;
 	   maplen > 0 && table[i].map[maplen - 1] == 0; maplen--)
@@ -97,10 +127,12 @@ stringprep_apply_table_to_string (uint32_t * ucs4,
       if (*ucs4len - 1 + maplen >= maxucs4len)
 	return STRINGPREP_TOO_SMALL_BUFFER;
 
-      memmove (&ucs4[pos + maplen], &ucs4[pos + 1],
-	       sizeof (uint32_t) * (*ucs4len - pos - 1));
-      memcpy (&ucs4[pos], table[i].map, sizeof (uint32_t) * maplen);
+      memmove (src + pos + maplen, src + pos + 1,
+	       sizeof (uint32_t) * (srclen - pos - 1));
+      memcpy (src + pos, table[i].map, sizeof (uint32_t) * maplen);
       *ucs4len = *ucs4len - 1 + maplen;
+      src += pos + maplen;
+      srclen -= pos + 1;
     }
 
   return STRINGPREP_OK;
@@ -188,7 +220,7 @@ stringprep_4i (uint32_t * ucs4, size_t * len, size_t maxucs4len,
 
 	case STRINGPREP_PROHIBIT_TABLE:
 	  k = stringprep_find_string_in_table (ucs4, ucs4len,
-					       NULL, profile[i].table);
+					       NULL, profile[i].table, profile[i].table_size);
 	  if (k != -1)
 	    return STRINGPREP_CONTAINS_PROHIBITED;
 	  break;
@@ -199,7 +231,7 @@ stringprep_4i (uint32_t * ucs4, size_t * len, size_t maxucs4len,
 	  if (flags & STRINGPREP_NO_UNASSIGNED)
 	    {
 	      k = stringprep_find_string_in_table
-		(ucs4, ucs4len, NULL, profile[i].table);
+		(ucs4, ucs4len, NULL, profile[i].table, profile[i].table_size);
 	      if (k != -1)
 		return STRINGPREP_CONTAINS_UNASSIGNED;
 	    }
@@ -209,7 +241,7 @@ stringprep_4i (uint32_t * ucs4, size_t * len, size_t maxucs4len,
 	  if (UNAPPLICAPLEFLAGS (flags, profile[i].flags))
 	    break;
 	  rc = stringprep_apply_table_to_string
-	    (ucs4, &ucs4len, maxucs4len, profile[i].table);
+	    (ucs4, &ucs4len, maxucs4len, profile[i].table, profile[i].table_size);
 	  if (rc != STRINGPREP_OK)
 	    return rc;
 	  break;
@@ -233,7 +265,7 @@ stringprep_4i (uint32_t * ucs4, size_t * len, size_t maxucs4len,
 		  done_prohibited = 1;
 		  k = stringprep_find_string_in_table (ucs4, ucs4len,
 						       NULL,
-						       profile[j].table);
+						       profile[j].table, profile[j].table_size);
 		  if (k != -1)
 		    return STRINGPREP_BIDI_CONTAINS_PROHIBITED;
 		}
@@ -241,14 +273,14 @@ stringprep_4i (uint32_t * ucs4, size_t * len, size_t maxucs4len,
 		{
 		  done_ral = 1;
 		  if (stringprep_find_string_in_table
-		      (ucs4, ucs4len, NULL, profile[j].table) != -1)
+		      (ucs4, ucs4len, NULL, profile[j].table, profile[j].table_size) != -1)
 		    contains_ral = j;
 		}
 	      else if (profile[j].operation == STRINGPREP_BIDI_L_TABLE)
 		{
 		  done_l = 1;
 		  if (stringprep_find_string_in_table
-		      (ucs4, ucs4len, NULL, profile[j].table) != -1)
+		      (ucs4, ucs4len, NULL, profile[j].table, profile[j].table_size) != -1)
 		    contains_l = j;
 		}
 
@@ -261,9 +293,9 @@ stringprep_4i (uint32_t * ucs4, size_t * len, size_t maxucs4len,
 	    if (contains_ral != SIZE_MAX)
 	      {
 		if (!(stringprep_find_character_in_table
-		      (ucs4[0], profile[contains_ral].table) != -1 &&
+		      (ucs4[0], profile[contains_ral].table, profile[contains_ral].table_size) != -1 &&
 		      stringprep_find_character_in_table
-		      (ucs4[ucs4len - 1], profile[contains_ral].table) != -1))
+		      (ucs4[ucs4len - 1], profile[contains_ral].table, profile[contains_ral].table_size) != -1))
 		  return STRINGPREP_BIDI_LEADTRAIL_NOT_RAL;
 	      }
 	  }
@@ -372,7 +404,7 @@ stringprep (char *in,
   int rc;
   char *utf8 = NULL;
   uint32_t *ucs4 = NULL;
-  size_t ucs4len, maxucs4len, adducs4len = 50;
+  size_t ucs4len, maxucs4len, adducs4len = strlen (in) / 10 + 1;
 
   do
     {
@@ -392,7 +424,7 @@ stringprep (char *in,
       ucs4 = newp;
 
       rc = stringprep_4i (ucs4, &ucs4len, maxucs4len, flags, profile);
-      adducs4len += 50;
+      adducs4len *= 2;
     }
   while (rc == STRINGPREP_TOO_SMALL_BUFFER);
   if (rc != STRINGPREP_OK)
@@ -450,7 +482,7 @@ stringprep_profile (const char *in,
 {
   const Stringprep_profiles *p;
   char *str = NULL;
-  size_t len = strlen (in) + 1;
+  size_t len = strlen (in) + 1, addlen = len / 10 + 1;
   int rc;
 
   for (p = &stringprep_profiles[0]; p->name; p++)
@@ -470,7 +502,8 @@ stringprep_profile (const char *in,
       strcpy (str, in);
 
       rc = stringprep (str, len, flags, p->tables);
-      len += 50;
+      len += addlen;
+      addlen *= 2;
     }
   while (rc == STRINGPREP_TOO_SMALL_BUFFER);
 

@@ -55,6 +55,10 @@
 		D9633FC11E5E8C14008B190A /* u8-check.c in Sources */ = {isa = PBXBuildFile; fileRef = D9633FA11E5E8C14008B190A /* u8-check.c */; };
 		D9A06D441E5D88F100FA59D3 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2813C71E559B6C00DFC03B /* libiconv.tbd */; };
 		D9A06D511E5D88F100FA59D3 /* libidn.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D2812341E5597AF00DFC03B /* libidn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9C56AC120C4A97E00BB4BF2 /* rfc3454.h in Headers */ = {isa = PBXBuildFile; fileRef = D9C56AC020C4A97E00BB4BF2 /* rfc3454.h */; };
+		D9C56AC220C4A97E00BB4BF2 /* rfc3454.h in Headers */ = {isa = PBXBuildFile; fileRef = D9C56AC020C4A97E00BB4BF2 /* rfc3454.h */; };
+		D9C56AC320C4A97E00BB4BF2 /* rfc3454.h in Headers */ = {isa = PBXBuildFile; fileRef = D9C56AC020C4A97E00BB4BF2 /* rfc3454.h */; };
+		D9C56AC420C4A97E00BB4BF2 /* rfc3454.h in Headers */ = {isa = PBXBuildFile; fileRef = D9C56AC020C4A97E00BB4BF2 /* rfc3454.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,7 @@
 		D9633FA01E5E8C14008B190A /* stringprep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringprep.h; sourceTree = "<group>"; };
 		D9633FA11E5E8C14008B190A /* u8-check.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "u8-check.c"; sourceTree = "<group>"; };
 		D9A06D661E5D88F100FA59D3 /* libidn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libidn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C56AC020C4A97E00BB4BF2 /* rfc3454.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfc3454.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +167,7 @@
 				D9633F9B1E5E8C14008B190A /* gunidecomp.h */,
 				D9633F9C1E5E8C14008B190A /* nfkc.c */,
 				D9633F9D1E5E8C14008B190A /* profiles.c */,
+				D9C56AC020C4A97E00BB4BF2 /* rfc3454.h */,
 				D9633F9E1E5E8C14008B190A /* rfc3454.c */,
 				D9633F9F1E5E8C14008B190A /* stringprep.c */,
 				D9633FA01E5E8C14008B190A /* stringprep.h */,
@@ -181,6 +187,7 @@
 				D9633FA61E5E8C14008B190A /* gunidecomp.h in Headers */,
 				D949C9AD1E5E347300DF5447 /* NSString+IDN.h in Headers */,
 				D9633FBA1E5E8C14008B190A /* stringprep.h in Headers */,
+				D9C56AC120C4A97E00BB4BF2 /* rfc3454.h in Headers */,
 				D9633FA21E5E8C14008B190A /* gunicomp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +200,7 @@
 				D9633FA71E5E8C14008B190A /* gunidecomp.h in Headers */,
 				D949C9AF1E5E347300DF5447 /* NSString+IDN.h in Headers */,
 				D9633FBB1E5E8C14008B190A /* stringprep.h in Headers */,
+				D9C56AC220C4A97E00BB4BF2 /* rfc3454.h in Headers */,
 				D9633FA31E5E8C14008B190A /* gunicomp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +213,7 @@
 				D9633FA91E5E8C14008B190A /* gunidecomp.h in Headers */,
 				D949C9B01E5E347300DF5447 /* NSString+IDN.h in Headers */,
 				D9633FBD1E5E8C14008B190A /* stringprep.h in Headers */,
+				D9C56AC420C4A97E00BB4BF2 /* rfc3454.h in Headers */,
 				D9633FA51E5E8C14008B190A /* gunicomp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +226,7 @@
 				D9633FA81E5E8C14008B190A /* gunidecomp.h in Headers */,
 				D949C9AE1E5E347300DF5447 /* NSString+IDN.h in Headers */,
 				D9633FBC1E5E8C14008B190A /* stringprep.h in Headers */,
+				D9C56AC320C4A97E00BB4BF2 /* rfc3454.h in Headers */,
 				D9633FA41E5E8C14008B190A /* gunicomp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
