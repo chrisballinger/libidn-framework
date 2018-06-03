@@ -1,16 +1,16 @@
 PODS:
-  - libidn (1.33)
+  - libidn (1.35)
 
 DEPENDENCIES:
   - libidn (from `../`)
 
 EXTERNAL SOURCES:
   libidn:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  libidn: 90fc1a62b60288dcf543f13f4ebca913f17d829f
+  libidn: 3e773fbbf3666bbfacf3b2b59eae47c3a003dcf9
 
 PODFILE CHECKSUM: fa25bb5fd5c0703a1111e8e785e8405c318540f8
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3
