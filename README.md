@@ -30,7 +30,7 @@ pod "libidn"
 
 Upgrading libidn:
 
-* Download latest release from [https://ftp.gnu.org/gnu/libidn](https://ftp.gnu.org/gnu/libidn/).
+* Download latest release 1.x from [https://ftp.gnu.org/gnu/libidn](https://ftp.gnu.org/gnu/libidn/). The 2.x series does not include `stringprep`, which is needed by this wrapper library.
 * Copy over updated files that are in `/lib` folder
 * Comment out `#include <config.h>"`
 * Replace `# include <idn-int.h>` and `#include "unistr.h"` with `#include <stdint.h>`
