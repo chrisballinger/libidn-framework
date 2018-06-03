@@ -1,3 +1,0 @@
-[submodule "libidn"]
-	path = libidn
-	url = https://github.com/chrisballinger/libidn.git
