@@ -19,3 +19,5 @@ script:
   - xcodebuild -workspace libidn.xcworkspace -scheme libidnTestsPods -sdk macosx -arch x86_64 test | xcpretty -c
   - xcodebuild -workspace libidn.xcworkspace -scheme "libidn (tvOS)" -sdk appletvsimulator -arch x86_64 build | xcpretty -c
   - xcodebuild -workspace libidn.xcworkspace -scheme "libidn (watchOS)" -sdk watchos build | xcpretty -c
+  - swift build -c release
+  - swift test -c release
