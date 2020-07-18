@@ -1,9 +1,5 @@
 #import "NSString+IDN.h"
-#ifdef COCOAPODS
 #import "stringprep.h"
-#else
-#import "../lib/stringprep.h"
-#endif
 
 @implementation NSString (IDN)
 

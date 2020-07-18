@@ -23,7 +23,10 @@ let package = Package(
                 "lib",
                 "Framework"
             ],
-            publicHeadersPath: "Framework"
+            publicHeadersPath: "Framework",
+            cSettings: [
+                .headerSearchPath("lib")
+            ]
         ),
         .testTarget(
             name: "libidnTests",
