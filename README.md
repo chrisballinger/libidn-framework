@@ -18,9 +18,20 @@ This podspec uses a [fork of libidn](https://github.com/chrisballinger/libidn/co
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Installation
+### Swift Package Manager
+libidn is available through [Swift Package Manager](https://swift.org/package-manager). To install
+it, simply add the following to your **`Package.swift`**:
 
-libidn is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+```swift
+dependencies: [
+    .package(url: "https://github.com/chrisballinger/libidn-framework.git", .upToNextMajor(from: "x.x.x"))
+]
+```
+> Make sure to replace `x.x.x` with the appropriate version number.
+
+### CocoaPods
+libidn is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your **`Podfile`**:
 
 ```ruby
 pod "libidn"
