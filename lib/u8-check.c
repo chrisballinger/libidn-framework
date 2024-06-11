@@ -19,6 +19,7 @@
 
 /* Specification.  */
 #include <stdint.h>
+#include <stddef.h>
 //#include "unistr.h"
 
 const uint8_t *
